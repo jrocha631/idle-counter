@@ -1,0 +1,89 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.per-second {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin: 0;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.counter {
+  font-size: 16px;
+  padding: 8px 20px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s, opacity 0.3s;
+
+  &:hover:not(:disabled) {
+    border-color: var(--accent-border);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  &.unlock {
+    opacity: 0.75;
+  }
+
+  &.automate {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    opacity: 0.85;
+  }
+
+  &.upgrade {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    opacity: 0.85;
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+}
+
+.cost {
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+.automated-badge {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: bold;
+  text-align: center;
+}
